@@ -5,7 +5,7 @@
   *
   * @s: pointer of a parameter
   */
-void print_rev(char *s);
+void print_rev(char *s)
 {
 	int length = 0;
 
