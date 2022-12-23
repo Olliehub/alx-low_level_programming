@@ -1,7 +1,8 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
-  * print_array - prints n elements of an array of integers
+  * print_array - prints n elements
   *
   * @a: pointer of a parameter
   * @n: parameter
