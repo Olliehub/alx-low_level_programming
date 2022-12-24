@@ -2,7 +2,6 @@
 
 /**
   * _strcat - concatenates two strings
-  *
   * @dest: appends string
   * @src: adds string
   *
