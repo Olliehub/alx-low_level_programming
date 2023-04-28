@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	operation == (argv[2]);
+	operation = get_op_func(argv[2]);
 
 	if (operation == NULL)
 	{
