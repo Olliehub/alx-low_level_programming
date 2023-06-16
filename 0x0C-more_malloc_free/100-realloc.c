@@ -6,8 +6,9 @@
  * @ptr: pointer to the memory previously allocated
  * @old_size: size of the allocated space for ptr
  * @new_size: new size of the memory block
+ *
  * Return: if new_size > old_size, added memory should not be initialized,
- * return ptr, if new_size == old_size
+ * if new_size == old_size, return ptr
  * if ptr is NULL call == malloc(new_size) for all values of old and new size
  * if new_size=0 && ptr != NULL, call = free(ptr) and Return NULL.
  */
