@@ -10,7 +10,7 @@
  * Return: if new_size > old_size, added memory should not be initialized,
  * if new_size == old_size, return ptr
  * if ptr is NULL call == malloc(new_size) for all values of old and new size
- * if new_size=0 && ptr != NULL, call = free(ptr) and Return NULL.
+ * if new_size = 0 && ptr != NULL, call = free(ptr) and Return NULL.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
