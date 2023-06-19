@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 /**
- * print_dog - prints a struct dog
+ * print_dog - This prints a struct dog
  * @d: struct dog
  *
  * Retrun: no return.
  */
 void print_dog(struct dog *d)
 {
-	if (d)
+	if (d == NULL)
 	{
 		if (!(d->name))
 			printf("Name: (nil)\n");
