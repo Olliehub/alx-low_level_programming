@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * op-add - adds two numbers
+ * op-add - this adds two numbers
  * @a: first number
  * @b: second number
  *
@@ -13,7 +13,7 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub -substracts two numbers
+ * op_sub - this substracts two numbers
  * @a: first number
  * @b: second number
  *
@@ -25,7 +25,7 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - multiplies two numbers
+ * op_mul - this multiplies two numbers
  * @a: first number
  * @b: second number
  *
@@ -37,7 +37,7 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - divides two numbers
+ * op_div - this divides two numbers
  * @a: first number
  * @b: second number
  *
@@ -54,7 +54,7 @@ int op_div(int a, int b)
 }
 
 /**
- * op_mod - calculates the module of two numbers
+ * op_mod - this calculates the module of two numbers
  * @a: first number
  * @b: second number
  *
