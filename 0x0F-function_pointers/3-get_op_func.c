@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include "3-calc.h"
 
 /**
- * get_op_func - selects the correct function to perform
+ * get_op_func - This selects the correct function to perform
  * the operation asked by user.
  * @s: char operator
  *
@@ -16,7 +16,7 @@ int (*get_op_func(char *s))(int, int)
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}
-	}
+	};
 	int i = 0;
 
 	while (i < 10)
