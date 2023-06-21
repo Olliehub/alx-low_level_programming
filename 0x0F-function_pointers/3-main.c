@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "3-calc.h"
 
 /**
- * main - check the code for Holberton School students.
+ * main - this check the code for Holberton School students.
  * @argc: argument count
  * @argv: argument vector
  *
@@ -11,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int a, b;
-	int (*(int, int));
+	int (*operation(int, int));
 
 	if (argc != 4)
 	{
@@ -30,6 +31,6 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	printf("%d\n", operation(a, b));
+	printf("%ls", operation(a, b));
 	return (0);
 }
