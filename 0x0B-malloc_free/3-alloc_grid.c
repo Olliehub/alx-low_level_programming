@@ -10,10 +10,11 @@
 
 int **alloc_grid(int width, int height)
 {
+	/*Declaring variables*/
 	int **mat;
 	int i, j;
 
-	if (height <= 0 || width <= 0)
+	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
@@ -27,10 +28,10 @@ int **alloc_grid(int width, int height)
 
 	for (i = 0, i < height; i++;)
 	{
-		mat[i] =  malloc(sizeof(int) * width);
+		mat[i] = malloc(sizeof(int) * width);
 		if (mat[i] == NULL)
 		{
-			for (i = i - 1; i >= 0; i++)
+			for (i = i - 1; i >= 0; i--)
 			{
 				free(mat[i]);
 			}
@@ -38,7 +39,6 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
-
 	for (i = 0; j < width; j++)
 	mat[i][j] = 0;
 	return (mat);
