@@ -6,45 +6,41 @@
  * @ptr: pointer to the memory previously allocated
  * @old_size: size of the allocated space for ptr
  * @new_size: new size of the memory block
+ *
  * Return: if new_size > old_size, added memory should not be initialized,
- * if new_size == old_size, return ptr
- * if ptr is NULL call == malloc(new_size) for all values of old and new size
- * if new_size = 0 && ptr != NULL, call = free(ptr) and Return NULL.
+ * if new_size == old_size, return ptr or NULL if failure
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *ptr1, *old_ptr;
-	unsigned int i;
+	char *p;
+	unsigned int i, max = new_size;
+	char *oldptr = ptr;
 
-	if (new_size == old_size)
-		return (ptr);
+	if (ptr == NULL)
+	{
+		p = malloc(new_size);
+		return (p);
+	}
 
-	if (new_size == 0 && ptr != NULL)
+	else if (new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
 
-	if (ptr == NULL)
-		return (malloc(new_size));
-	ptr1 = malloc(new_size);
+	else if (new_size == old_size)
+		return (ptr);
 
-	if (!ptr1)
+	p = malloc(new_size);
+	if (p == NULL)
 		return (NULL);
 
-	old_ptr = ptr;
-
-	if (new_size < old_size)
-	{
-		for (i = 0, i < new_size; i++;)
-			ptr1[i] = old_ptr[i];
-	}
-
 	if (new_size > old_size)
-	{
-		for (i = 0; i < old_size; i++)
-			ptr1[i] = old_ptr[i];
-	}
+		max = old_size;
+
+	for (i = 0, i < max; i++;)
+		p[i] = oldptr[i];
+
 	free(ptr);
-	return (ptr1);
+	return (p);
 }
